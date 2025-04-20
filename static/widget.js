@@ -21,25 +21,25 @@
     const result = container.querySelector("#my-widget-result");
   
     button.onclick = async () => {
-      const text = input.value.trim();
-      if (!text) return;
-  
-      result.textContent = "Загрузка...";
-  
-      try {
-        const response = await fetch(apiUrl, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({ query: text })
-        });
-  
-        const data = await response.json();
-        result.innerHTML = data.results.map(r => `<div>${r}</div>`).join("");
-      } catch (e) {
-        result.textContent = "Ошибка запроса.";
-      }
+        const text = input.value.trim();
+        if (!text) return;
+    
+        result.textContent = "Widget loading...";
+    
+        try {
+            const response = await fetch(apiUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ query: text })
+            });
+    
+            const data = await response.json();
+            result.innerHTML = data.results.map(r => `<div>${r}</div>`).join("");
+        } catch (e) {
+            result.textContent = "Request error.";
+        }
     };
   })();
   
