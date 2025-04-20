@@ -22,5 +22,5 @@ Open **ai-client.html** in browser.
 
 
 <p align="left">
-  <img src="assets/ai-widget.png" alt="ai-widget">
+  <img src="assets/ai-widget.png" alt="ai-widget" width="360">
 </p>
