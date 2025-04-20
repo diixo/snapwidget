@@ -3,7 +3,7 @@
 
 
 ## How to start:
-* Run FastAPI:
+* Run FastAPI-server:
 ```
 uvicorn main:app --reload
 ```
@@ -13,7 +13,7 @@ uvicorn main:app --reload
 python -m http.server 5500
 ```
 
-Open **client.html** in browser.
+Open **ai-client.html** in browser.
 
 ## Content:
 
