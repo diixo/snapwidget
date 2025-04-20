@@ -10,7 +10,7 @@ uvicorn main:app --reload
 
 * Run HTTP-server:
 ```bash
-python -m http.server 5500
+python -m http.server 3400
 ```
 
 Open **ai-client.html** in browser.
