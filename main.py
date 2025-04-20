@@ -35,7 +35,7 @@ def search(q: Query):
 def chat(q: QueryMsg):
     print(f"chat query: {q.message}")
     return {"response": [
-        f">> {q.message}",
-        "Detailing 2",
-        "Advice 3"
+        f"{q.message}",
+        "Example: detailing-2",
+        "Example: detailing-3"
         ]}

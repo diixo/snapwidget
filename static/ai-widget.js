@@ -15,7 +15,7 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      width: 300px;
+      width: 320px;
       background: white;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.15);
@@ -41,18 +41,24 @@
         margin-top: 8px;
         width: 100%;
         padding: 10px;
-        background-color: #4CAF50;
+        background-color: #9006d0;
         color: white;
         border: none;
         border-radius: 8px;
         font-weight: bold;
         font-size: 14px;
         cursor: pointer;
-      ">Отправить</button>
+      ">Send</button>
       <div id="widget-response" style="
         margin-top: 12px;
         font-size: 14px;
         color: #333;
+        max-height: 200px;
+        overflow-y: auto;
+        transition: max-height 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
       "></div>
     `;
 
@@ -77,7 +83,7 @@
             const data = await res.json();
             if (Array.isArray(data.response)) {
                 response.innerHTML = data.response
-                  .map((line) => `<div style="margin-bottom: 6px;">${line}</div>`)
+                  .map((line) => `<div style="padding: 6px 8px; background: #f6f6f6; border-radius: 6px;">${line}</div>`)
                   .join("");
             } else {
                 response.innerHTML = `<div>${data.response || "Response absent"}</div>`;

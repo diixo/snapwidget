@@ -4,12 +4,12 @@
 
 ## How to start:
 * Run FastAPI-server:
-```
+```bash
 uvicorn main:app --reload
 ```
 
 * Run HTTP-server:
-```
+```bash
 python -m http.server 5500
 ```
 
@@ -19,6 +19,15 @@ Open **ai-client.html** in browser.
 
 * **client.html** with **widget.js**
 * **ai-client.html** with **ai-widget.js**
+
+
+## Integration:
+
+Add the code to your website page
+```html
+<div id="my-custom-widget"></div>
+<script src="https://server-domain.com/static/ai-widget.js"></script>
+```
 
 
 <p align="left">
