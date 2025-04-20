@@ -19,3 +19,8 @@ Open **ai-client.html** in browser.
 
 * **client.html** with **widget.js**
 * **ai-client.html** with **ai-widget.js**
+
+
+<p align="left">
+  <img src="assets/ai-widget.png" alt="ai-widget">
+</p>
