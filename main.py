@@ -34,4 +34,8 @@ def search(q: Query):
 @app.post("/api/chat")
 def chat(q: QueryMsg):
     print(f"chat query: {q.message}")
-    return {"response": f">> {q.message}"}
+    return {"response": [
+        f">> {q.message}",
+        "Detailing 2",
+        "Advice 3"
+        ]}

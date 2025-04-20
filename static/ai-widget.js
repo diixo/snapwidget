@@ -75,10 +75,18 @@
             });
         
             const data = await res.json();
-            response.innerHTML = `<strong>Answer:</strong> ${data.response || "Response absent"}`;
+            if (Array.isArray(data.response)) {
+                response.innerHTML = data.response
+                  .map((line) => `<div style="margin-bottom: 6px;">${line}</div>`)
+                  .join("");
+            } else {
+                response.innerHTML = `<div>${data.response || "Response absent"}</div>`;
+            }
             
             // clear input field
             input.value = "";
+            input.focus();
+
             } catch (e) {
                 response.innerHTML = `<span style="color:red;">Connection error</span>`;
             }
