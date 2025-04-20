@@ -21,8 +21,17 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 class Query(BaseModel):
     query: str
 
+class QueryMsg(BaseModel):
+    message: str
+
 
 @app.post("/api/search")
 def search(q: Query):
     print(f"search query: {q.query}")
     return {"results": [f"Result for: {q.query}"]}
+
+
+@app.post("/api/chat")
+def chat(q: QueryMsg):
+    print(f"chat query: {q.message}")
+    return {"response": f">> {q.message}"}

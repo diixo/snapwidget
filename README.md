@@ -2,14 +2,20 @@
 # snapwidget
 
 
-## Run FastAPI:
+## How to start:
+* Run FastAPI:
 ```
 uvicorn main:app --reload
 ```
 
-## Run HTTP-server:
+* Run HTTP-server:
 ```
-python3 -m http.server 5500
+python -m http.server 5500
 ```
 
-To test functionality, open **client.html** in browser.
+Open **client.html** in browser.
+
+## Content:
+
+* **client.html** with **widget.js**
+* **ai-client.html** with **ai-widget.js**
