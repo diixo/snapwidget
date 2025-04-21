@@ -1,5 +1,6 @@
 
 (function () {
+    const API_URL = "http://127.0.0.1:8000/api/chat";
 
     const container = document.getElementById("ai-snapwidget");
     const apiKey = container.getAttribute("pub-api-key");
@@ -75,7 +76,7 @@
     
         response.innerHTML = "⏳ Sending...";
         try {
-            const res = await fetch("http://127.0.0.1:8000/api/chat", {
+            const res = await fetch(API_URL, {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
