@@ -1,12 +1,17 @@
 
 (function () {
-    const API_URL = "http://127.0.0.1:8000/api/chat";
-
     const container = document.getElementById("ai-snapwidget");
     const apiKey = container.getAttribute("pub-api-key");
+    const api_hostname = container.getAttribute("api-url");
+    const API_URL = `${api_hostname}:8000/api/chat`;
   
     if (!container) {
       console.error("Widget: container was not found by id='ai-snapwidget'");
+      return;
+    }
+
+    if (!api_hostname) {
+      console.error("Widget: 'api-url' is absent in 'ai-snapwidget'");
       return;
     }
   
