@@ -48,7 +48,7 @@
         margin-top: 8px;
         width: 100%;
         padding: 10px;
-        background-color: #8006d0;
+        background-color: #4CAF50;
         color: white;
         border: none;
         border-radius: 8px;
