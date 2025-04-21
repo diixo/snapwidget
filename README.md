@@ -1,6 +1,10 @@
 
 # snapwidget
 
+<p align="left">
+  <img src="assets/ai-widget.png" alt="ai-widget" width="360">
+</p>
+
 
 ## How to start:
 * Run FastAPI-server:
@@ -25,12 +29,8 @@ Open **ai-client.html** in browser.
 
 Add this code to your website page:
 ```html
-<div id="ai-snapwidget" pub-api-key="3ff02d50-daaa-5d71-b193-dad394878051" api-url="http://example.com"></div>
-<script src="http://example.com:8000/static/ai-widget.js"></script>
+<div id="ai-snapwidget" pub-api-key="3ff02d50-daaa-5d71-b193-dad394878051" api-url="http://api-example.com"></div>
+<script src="http://api-example.com:8000/static/ai-widget.js"></script>
 ```
 **NOTICE:** pub-api-key should be generated for each client personally.
 
-## UI/UX on site
-<p align="left">
-  <img src="assets/ai-widget.png" alt="ai-widget" width="360">
-</p>
