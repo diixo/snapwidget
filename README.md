@@ -21,13 +21,14 @@ Open **ai-client.html** in browser.
 * **ai-client.html** with **ai-widget.js**
 
 
-## Integration:
+## How to use:
 
-Add the code to your website page
+Add this code to your website page:
 ```html
-<div id="my-custom-widget"></div>
-<script src="https://server-domain.com/static/ai-widget.js"></script>
+<div id="ai-snapwidget" pub-api-key="3ff02d50-daaa-5d71-b193-dad394878051"></div>
+<script src="http://127.0.0.1:8000/static/ai-widget.js"></script>
 ```
+**NOTICE:** pub-api-key should be generated for each client personally.
 
 
 <p align="left">

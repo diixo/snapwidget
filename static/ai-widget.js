@@ -1,10 +1,11 @@
 
 (function () {
 
-    const container = document.getElementById("my-custom-widget");
+    const container = document.getElementById("ai-snapwidget");
+    const apiKey = container.getAttribute("pub-api-key");
   
     if (!container) {
-      console.error("Widget: container was not found by id='my-custom-widget'");
+      console.error("Widget: container was not found by id='ai-snapwidget'");
       return;
     }
   
@@ -41,7 +42,7 @@
         margin-top: 8px;
         width: 100%;
         padding: 10px;
-        background-color: #9006d0;
+        background-color: #8006d0;
         color: white;
         border: none;
         border-radius: 8px;
@@ -69,15 +70,18 @@
     const response = widget.querySelector("#widget-response");
   
     send.addEventListener("click", async () => {
-        const text = input.value.trim();
-        if (!text) return;
+        const message = input.value.trim();
+        if (!message) return;
     
         response.innerHTML = "⏳ Sending...";
         try {
             const res = await fetch("http://127.0.0.1:8000/api/chat", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ message: text }),
+                headers: {
+                  "Content-Type": "application/json",
+                  "pub-api-key": apiKey,
+                },
+                body: JSON.stringify({ message }),
             });
         
             const data = await res.json();
