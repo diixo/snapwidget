@@ -21,8 +21,8 @@ Open **ai-client.html** in browser.
 
 ## Content:
 
-* **client.html** with **widget.js**
-* **ai-client.html** with **ai-widget.js**
+* **ai-client.html** with **ai-widget.js** (styled version)
+* **client.html** with **widget.js** (simple version)
 
 
 ## How to use:
